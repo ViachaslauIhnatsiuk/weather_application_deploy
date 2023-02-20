@@ -26,7 +26,15 @@ const CalendarDatePicker: FC = () => {
   };
 
   return (
-    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        gap: 1,
+      }}
+    >
       <CalendarDatePickerItem date={startDate} setDate={handleStartDate} />
       <CalendarDatePickerItem date={endDate} setDate={handleEndDate} />
       <Button

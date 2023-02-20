@@ -10,7 +10,7 @@ const CalendarEvents: FC = () => {
   return (
     <Stack
       sx={{
-        maxHeight: { md: 140, sm: 200, xs: 200 },
+        maxHeight: { md: 120, sm: 200, xs: 200 },
         gap: 1,
         overflow: 'auto',
         '&::-webkit-scrollbar': {

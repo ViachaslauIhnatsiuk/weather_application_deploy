@@ -23,7 +23,7 @@ const CalendarDatePickerItem: FC<DatePickerItemProps> = ({ date, setDate }) => {
             size="small"
             sx={{
               maxWidth: 110,
-              '& .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root': {
+              '& .MuiInputBase-root': {
                 color: '#ffffff',
                 fontSize: 14,
               },

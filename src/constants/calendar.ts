@@ -1,9 +1,12 @@
 export const dialogProps = {
   sx: {
-    '& .css-1hbyad5-MuiTypography-root': {
+    '& .MuiTypography-root': {
       color: '#ffffff',
     },
     '& .MuiGrid-root': {
+      color: '#ffffff',
+    },
+    '& .MuiSvgIcon-root': {
       color: '#ffffff',
     },
     '& .MuiPaper-root': {
@@ -22,9 +25,6 @@ export const dialogProps = {
       backgroundColor: 'transparent',
       backdropFilter: 'blur(12px)',
     },
-    '& .css-i4bv87-MuiSvgIcon-root': {
-      color: '#ffffff',
-    },
-    '& .css-1e6y48t-MuiButtonBase-root-MuiButton-root': { color: '#ffffff' },
+    '& .MuiButtonBase-root': { color: '#ffffff' },
   },
 };

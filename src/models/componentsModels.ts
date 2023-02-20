@@ -4,14 +4,14 @@ interface ICallbackResponse {
 }
 
 enum CalendarMessages {
-  signInMessage = 'To access google calendar events, go through the authorization process',
+  signInMessage = 'To access google calendar events, click "Sign In"',
   signOutMessage = 'To hide google calendar events, click "Sign Out"',
   noEventsMessage = 'You don`t have any events yet',
 }
 
 enum GoogleButton {
-  signIn = 'Sign in with Google',
-  signOut = 'Sign out',
+  signIn = 'Sign In',
+  signOut = 'Sign Out',
 }
 
 enum ImagesTitles {

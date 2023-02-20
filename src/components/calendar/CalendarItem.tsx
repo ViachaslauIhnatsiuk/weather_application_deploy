@@ -32,10 +32,10 @@ const CalendarItem: FC<{ item: ICalendarItem }> = ({ item }) => {
       >
         {item.start.dateTime ? (
           <>
-            <Box sx={{ fontSize: 14 }}>
+            <Box sx={{ fontSize: 13 }}>
               {convertCalendarTime(item.start.dateTime, calendarTime)}
             </Box>
-            <Box sx={{ fontSize: 14 }}>
+            <Box sx={{ fontSize: 13 }}>
               {convertCalendarTime(item.end.dateTime, calendarTime)}
             </Box>
           </>
@@ -43,7 +43,7 @@ const CalendarItem: FC<{ item: ICalendarItem }> = ({ item }) => {
           <Box sx={{ fontSize: 14, textAlign: 'center' }}>All day long</Box>
         )}
       </Paper>
-      <Box sx={{ fontSize: 13, letterSpacing: 0.2, fontWeight: 100 }}>{item.summary}</Box>
+      <Box sx={{ fontSize: 12, letterSpacing: 0.2, fontWeight: 100 }}>{item.summary}</Box>
     </Box>
   );
 };

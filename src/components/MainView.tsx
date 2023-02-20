@@ -36,7 +36,7 @@ const MainView: FC = () => {
           backgroundColor: changeBackground(),
           backdropFilter: 'blur(12px)',
           px: { md: 6, sm: 6, xs: 3 },
-          py: 5,
+          py: 3,
           gap: 5,
         }}
       >

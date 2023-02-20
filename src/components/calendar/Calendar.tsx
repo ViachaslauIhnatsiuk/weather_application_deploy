@@ -1,7 +1,6 @@
 import { FC, useEffect } from 'react';
-import { Box, Divider, Stack } from '@mui/material';
+import { Divider, Stack } from '@mui/material';
 import { CalendarHeader } from './CalendarHeader';
-import { CalendarButton } from './CalendarButton';
 import { CalendarEvents } from './CalendarEvents';
 import { selectCalendar, useAppSelector } from '../../store/selectors';
 import { useAppDispatch } from '../../store/store';
@@ -19,17 +18,7 @@ const Calendar: FC = () => {
   return (
     <Stack sx={{ width: '100%', alignItems: 'center', gap: 2 }}>
       <CalendarHeader />
-      <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          flexDirection: 'column',
-          gap: 1,
-        }}
-      >
-        <CalendarButton />
-        {token && <CalendarDatePicker />}
-      </Box>
+      {token && <CalendarDatePicker />}
       <Divider sx={{ width: '100%' }} />
       <CalendarEvents />
     </Stack>

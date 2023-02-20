@@ -26,7 +26,7 @@ const SearchBar: FC = () => {
       sx={{ display: 'flex', alignItems: 'center', backgroundColor: 'transparent' }}
     >
       <Autocomplete
-        sx={{ '& .css-ptiqhd-MuiSvgIcon-root': { color: '#ffffff' } }}
+        sx={{ '& .MuiSvgIcon-root': { color: '#ffffff' } }}
         componentsProps={{
           paper: {
             sx: {

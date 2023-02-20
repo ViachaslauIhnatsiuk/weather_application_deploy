@@ -14,6 +14,7 @@ const CalendarButton: FC = () => {
       sx={{
         color: '#ffffff',
         fontWeight: 200,
+        minWidth: 120,
         backgroundColor: 'transparent',
         textTransform: 'capitalize ',
         '&:hover': {
