@@ -1,0 +1,3 @@
+const CITY_SEARCH_DELAY = 400;
+
+export { CITY_SEARCH_DELAY };
