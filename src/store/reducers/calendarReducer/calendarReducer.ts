@@ -1,14 +1,19 @@
+import { getISODayStart, getISODayEnd } from '../../../helpers/date';
 import {
   LOG_IN,
   LOG_OUT,
+  SET_DATE_RANGE,
   GET_CALENDAR,
   GET_CALENDAR_SUCCESS,
   GET_CALENDAR_FAILURE,
 } from '../../actions/calendarActions';
 import { CalendarStatus, IAction, ICalendarState } from './calendarModels';
 
+const range = [getISODayStart(), getISODayEnd()];
+
 const initialState: ICalendarState = {
   calendarItems: [],
+  dateRange: range,
   token: '',
   status: '',
   error: '',
@@ -29,9 +34,17 @@ const calendarReducer = (state = initialState, { type, payload }: IAction) => {
       return {
         ...state,
         calendarItems: [],
+        dateRange: range,
         token: '',
         status: '',
         error: '',
+      };
+    }
+
+    case SET_DATE_RANGE: {
+      return {
+        ...state,
+        dateRange: payload,
       };
     }
 

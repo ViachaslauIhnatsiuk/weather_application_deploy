@@ -1,7 +1,7 @@
 import { call, put, select } from 'redux-saga/effects';
 import { SagaIterator } from 'redux-saga';
 import { fetchCalendar } from '../../../api/calendar';
-import { selectCalendarToken } from '../../selectors';
+import { selectDateRange, selectCalendarToken } from '../../selectors';
 import { ICalendarResponse } from '../../../models/api';
 import {
   getCalendarFailure,
@@ -14,7 +14,8 @@ function* calendarWorker(): SagaIterator {
 
   if (token) {
     try {
-      const response: ICalendarResponse = yield call(fetchCalendar, token, new Date());
+      const range: [string, string] = yield select(selectDateRange);
+      const response: ICalendarResponse = yield call(fetchCalendar, token, ...range);
       const calendarItems = response.items;
 
       yield put(getCalendarSuccess(calendarItems));

@@ -8,6 +8,7 @@ enum CalendarStatus {
 
 interface ICalendarState {
   calendarItems: ICalendarItem[];
+  dateRange: string[];
   token: string;
   status: string;
   error: string;
@@ -15,7 +16,7 @@ interface ICalendarState {
 
 interface IAction {
   type: string;
-  payload: ICalendarResponse;
+  payload: ICalendarResponse | string[];
 }
 
 export { CalendarStatus };

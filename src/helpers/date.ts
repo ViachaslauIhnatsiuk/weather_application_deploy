@@ -38,21 +38,26 @@ const convertCalendarTime = (
   return date.toLocaleString('en-GB', options);
 };
 
-const getISODayRange = (day: Date): string[] => {
+const getISODayStart = (day: number | string = Date.now()): string => {
   const start = new Date(day);
-  const end = new Date(day);
-
   start.setUTCHours(0, 0, 0, 0);
+
+  return start.toISOString();
+};
+
+const getISODayEnd = (day: number | string = Date.now()): string => {
+  const end = new Date(day);
   end.setUTCHours(23, 59, 59, 999);
 
-  return [start.toISOString(), end.toISOString()];
+  return end.toISOString();
 };
 
 export {
   getDate,
   convertDate,
   convertCalendarTime,
-  getISODayRange,
+  getISODayStart,
+  getISODayEnd,
   currentTime,
   currentWeekday,
   currentDate,

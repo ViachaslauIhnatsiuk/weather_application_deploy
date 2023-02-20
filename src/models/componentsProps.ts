@@ -19,9 +19,15 @@ interface ForecastInfoItemProps {
   width: number;
 }
 
+interface DatePickerItemProps {
+  date: string;
+  setDate: (value: string) => void;
+}
+
 export type {
   ModalButtonProps,
   WeatherIconProps,
   AirQualityItemProps,
   ForecastInfoItemProps,
+  DatePickerItemProps,
 };

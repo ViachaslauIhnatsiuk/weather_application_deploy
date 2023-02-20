@@ -14,6 +14,7 @@ const selectDailyForecast = (state: RootState) =>
 const selectLocation = (state: RootState) => state.location;
 
 const selectCalendar = (state: RootState) => state.calendar;
+const selectDateRange = (state: RootState) => state.calendar.dateRange;
 const selectCalendarToken = (state: RootState) => state.calendar.token;
 
 export {
@@ -25,5 +26,6 @@ export {
   selectDailyForecast,
   selectLocation,
   selectCalendar,
+  selectDateRange,
   selectCalendarToken,
 };
