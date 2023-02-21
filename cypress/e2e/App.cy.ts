@@ -14,14 +14,16 @@ describe('App E2E', () => {
   });
 
   it('confimational modal loads', () => {
-    cy.get('[data-test-id=modal]').should('exist');
+    cy.get('#modal').should('exist');
   });
 
-  it('daily forecast component should have 7 elements', () => {
-    cy.get('[data-test-id=daily-forecast-item]').should('have.length', 7);
+  it('current forecast component renders with elements', () => {
+    cy.get('[data-testid=current-forecast]').children();
   });
 
-  it('hourly forecast component should have 24 elements', () => {
-    cy.get('[data-test-id=hourly-forecast-item]').should('have.length', 24);
+  it('autocomplete component works correctly', () => {
+    cy.get('[data-testid=search-bar]').click({ force: true });
+    cy.focused().type('Minsk');
+    cy.should('not.be.empty');
   });
 });

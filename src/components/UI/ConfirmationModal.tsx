@@ -32,6 +32,7 @@ const ConfirmationModal: FC = () => {
       keepMounted
       onClose={handleRejection}
       data-testid="modal"
+      id="modal"
     >
       <DialogContent>
         <DialogContentText sx={{ color: '#ffffff', fontWeight: 200 }}>
