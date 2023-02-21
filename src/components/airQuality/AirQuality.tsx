@@ -18,11 +18,18 @@ const AirQuality: FC = () => {
           width: 0,
         },
       }}
+      data-testid="air-quality"
     >
-      <Typography sx={{ fontSize: 22, fontWeight: 300, color: '#ffffff', pl: 1 }}>
+      <Typography
+        sx={{ fontSize: 22, fontWeight: 300, color: '#ffffff', pl: 1 }}
+        data-testid="air-quality-title"
+      >
         {airQuality && 'AIR QUALITY'}
       </Typography>
-      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+      <Box
+        sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}
+        data-testid="air-quality-items"
+      >
         {Object.values(airQuality || {}).map((value, index) => {
           return (
             <AirQualityItem

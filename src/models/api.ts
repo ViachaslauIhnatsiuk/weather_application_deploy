@@ -89,6 +89,7 @@ interface IForecastHour {
   gust_mph: number;
   gust_kph: number;
   uv: number;
+  air_quality: IAirQuality;
 }
 
 interface IForecastDay {
@@ -109,16 +110,17 @@ interface IForecastDay {
     avgvis_km: number;
     avgvis_miles: number;
     avghumidity: number;
-    _will_it_rain: number;
-    _chance_of_rain: number;
-    _will_it_snow: number;
-    _chance_of_snow: number;
+    daily_will_it_rain: number;
+    daily_chance_of_rain: number;
+    daily_will_it_snow: number;
+    daily_chance_of_snow: number;
     condition: {
       text: string;
       icon: string;
       code: number;
     };
     uv: number;
+    air_quality: IAirQuality;
   };
   astro: {
     sunrise: string;
@@ -126,7 +128,7 @@ interface IForecastDay {
     moonrise: string;
     moonset: string;
     moon_phase: string;
-    moon_illumination: number;
+    moon_illumination: string;
     is_moon_up: number;
     is_sun_up: number;
   };

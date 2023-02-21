@@ -3,7 +3,7 @@ import { Paper, Typography } from '@mui/material';
 import { AirQualityItemProps } from '../../models/componentsProps';
 
 const AirQualityItem: FC<AirQualityItemProps> = (props) => {
-  const { title = 'Quality', value = '0' } = props;
+  const { title = 'Quality', value = 0 } = props;
 
   return (
     <Paper

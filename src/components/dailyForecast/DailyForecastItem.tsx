@@ -19,6 +19,7 @@ const DailyForecastItem: FC<{ day: IForecastDay }> = ({ day }) => {
         backgroundColor: 'transparent',
         color: '#ffffff',
       }}
+      data-testid="daily-forecast-item"
     >
       <Typography sx={{ fontSize: { sm: 18, xs: 14 }, fontWeight: 100 }}>
         {convertDate(day.date_epoch, unixDate)}

@@ -18,6 +18,7 @@ const HourlyForecastItem: FC<{ hour: IForecastHour }> = ({ hour }) => {
         backgroundColor: 'transparent',
         color: '#ffffff',
       }}
+      data-testid="hourly-forecast-item"
     >
       <Typography sx={{ fontSize: 18, fontWeight: 100 }}>
         {hour.time.slice(-5)}

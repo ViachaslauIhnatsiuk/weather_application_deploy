@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calendar-item component snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <script
+      defer=""
+      src="https://apis.google.com/js/api.js"
+    />
+    <script
+      defer=""
+      src="https://accounts.google.com/gsi/client"
+    />
+    <div>
+      <div
+        class="MuiBox-root css-10bnxrd"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation4 css-qpq103-MuiPaper-root"
+        >
+          <div
+            class="MuiBox-root css-128nlh6"
+          >
+            12:45
+          </div>
+          <div
+            class="MuiBox-root css-128nlh6"
+          >
+            13:45
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-fkrg8m"
+        >
+          Add date picker
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiBox-root css-10bnxrd"
+    >
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation4 css-qpq103-MuiPaper-root"
+      >
+        <div
+          class="MuiBox-root css-128nlh6"
+        >
+          12:45
+        </div>
+        <div
+          class="MuiBox-root css-128nlh6"
+        >
+          13:45
+        </div>
+      </div>
+      <div
+        class="MuiBox-root css-fkrg8m"
+      >
+        Add date picker
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

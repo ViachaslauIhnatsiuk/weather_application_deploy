@@ -51,6 +51,7 @@ const SearchBar: FC = () => {
         renderInput={(params) => {
           return <AutocompleteTextField {...params} />;
         }}
+        data-testid="search-bar"
       />
     </Paper>
   );
