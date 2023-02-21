@@ -6,7 +6,7 @@ import { CurrentForecastInfo } from './CurrentForecastInfo';
 
 const CurrentForecast: FC = () => {
   return (
-    <Stack sx={{ color: '#ffffff' }}>
+    <Stack sx={{ color: '#ffffff' }} data-testid="current-forecast">
       <CurrentForecastTemperature />
       <CurrentForecastDate />
       <CurrentForecastInfo />

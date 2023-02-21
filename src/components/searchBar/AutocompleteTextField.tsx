@@ -21,6 +21,7 @@ const AutocompleteTextField: FC<AutocompleteRenderInputParams> = (params) => {
       {...params}
       size="small"
       placeholder="Search for a city"
+      data-testid="search-input"
     />
   );
 };

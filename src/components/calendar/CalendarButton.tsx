@@ -23,6 +23,7 @@ const CalendarButton: FC = () => {
       }}
       variant="contained"
       onClick={!token ? signIn : signOut}
+      data-testid="calendar-button"
     >
       <Box component="img" src={google} alt="google icon" sx={{ width: 20, mr: 1 }} />
       {!token ? GoogleButton.signIn : GoogleButton.signOut}
