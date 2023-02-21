@@ -20,6 +20,7 @@ interface ForecastInfoItemProps {
 }
 
 interface DatePickerItemProps {
+  label: string;
   date: string;
   setDate: (value: string) => void;
 }

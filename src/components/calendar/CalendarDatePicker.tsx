@@ -35,8 +35,8 @@ const CalendarDatePicker: FC = () => {
         gap: 1,
       }}
     >
-      <CalendarDatePickerItem date={startDate} setDate={handleStartDate} />
-      <CalendarDatePickerItem date={endDate} setDate={handleEndDate} />
+      <CalendarDatePickerItem label="start" date={startDate} setDate={handleStartDate} />
+      <CalendarDatePickerItem label="end" date={endDate} setDate={handleEndDate} />
       <Button
         variant="contained"
         sx={{

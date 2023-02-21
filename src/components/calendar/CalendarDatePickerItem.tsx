@@ -6,11 +6,12 @@ import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import { dialogProps } from '../../constants/calendar';
 import { DatePickerItemProps } from '../../models/componentsProps';
 
-const CalendarDatePickerItem: FC<DatePickerItemProps> = ({ date, setDate }) => {
+const CalendarDatePickerItem: FC<DatePickerItemProps> = ({ label, date, setDate }) => {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <MobileDatePicker
         DialogProps={dialogProps}
+        label={label}
         inputFormat="DD/MM/YYYY"
         openTo="year"
         views={['year', 'month', 'day']}
@@ -26,6 +27,10 @@ const CalendarDatePickerItem: FC<DatePickerItemProps> = ({ date, setDate }) => {
               '& .MuiInputBase-root': {
                 color: '#ffffff',
                 fontSize: 14,
+              },
+              '& .MuiInputLabel-root': {
+                color: '#ffffff',
+                fontWeight: 300,
               },
             }}
             {...params}
