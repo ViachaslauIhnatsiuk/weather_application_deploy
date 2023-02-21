@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
-import { AirQualityItem } from '../components/airQuality/AirQualityItem';
-import { renderProvider } from '../helpers/renderProvider';
+import { AirQualityItem } from '../../components/airQuality/AirQualityItem';
+import { renderProvider } from '../../helpers/renderProvider';
 
 describe('air-quality-item', () => {
   it('component renders with right values', () => {

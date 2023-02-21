@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom';
-import { fetchForecast } from '../api/forecast';
-import { renderProvider } from '../helpers/renderProvider';
-import { DailyForecastItem } from '../components/dailyForecast/DailyForecastItem';
-import { mockDay } from '../constants/mockData';
+import { fetchForecast } from '../../api/forecast';
+import { renderProvider } from '../../helpers/renderProvider';
+import { DailyForecastItem } from '../../components/dailyForecast/DailyForecastItem';
+import { mockDay } from '../../constants/mockData';
 
 const assetsFetchMock = () => Promise.resolve({ json: async () => mockDay } as Response);
 

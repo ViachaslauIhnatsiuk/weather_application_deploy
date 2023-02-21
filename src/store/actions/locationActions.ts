@@ -11,9 +11,15 @@ const GET_CITIES_FAILURE = 'GET_CITIES_FAILURE';
 
 const getLocation = () => ({ type: GET_LOCATION });
 
-const getLocationSuccess = (city: string) => ({ type: GET_LOCATION, payload: city });
+const getLocationSuccess = (city: string) => ({
+  type: GET_LOCATION_SUCCESS,
+  payload: city,
+});
 
-const getLocationFailure = (error: string) => ({ type: GET_LOCATION, payload: error });
+const getLocationFailure = (error: string) => ({
+  type: GET_LOCATION_FAILURE,
+  payload: error,
+});
 
 const setCurrentCity = (city: string) => ({ type: SET_CURRENT_CITY, payload: city });
 

@@ -1,4 +1,4 @@
-import { ICalendarResponse, ICalendarItem } from '../../../models/api';
+import { ICalendarItem } from '../../../models/api';
 
 enum CalendarStatus {
   loading = 'loading',
@@ -16,7 +16,7 @@ interface ICalendarState {
 
 interface IAction {
   type: string;
-  payload: ICalendarResponse | string[];
+  payload?: ICalendarItem[] | string[] | string;
 }
 
 export { CalendarStatus };

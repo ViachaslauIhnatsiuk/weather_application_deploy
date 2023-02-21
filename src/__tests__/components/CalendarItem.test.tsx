@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
-import { renderProvider } from '../helpers/renderProvider';
-import { CalendarItem } from '../components/calendar/CalendarItem';
-import { mockEvent } from '../constants/mockData';
+import { renderProvider } from '../../helpers/renderProvider';
+import { CalendarItem } from '../../components/calendar/CalendarItem';
+import { mockEvent } from '../../constants/mockData';
 
 describe('calendar-item', () => {
   it('component renders with right values', () => {

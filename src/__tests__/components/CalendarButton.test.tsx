@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
-import { CalendarButton } from '../components/calendar/CalendarButton';
-import { renderProvider } from '../helpers/renderProvider';
+import { CalendarButton } from '../../components/calendar/CalendarButton';
+import { renderProvider } from '../../helpers/renderProvider';
 
 describe('calendar-button', () => {
   it('component renders', () => {

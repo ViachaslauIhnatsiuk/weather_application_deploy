@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { fireEvent, within } from '@testing-library/react';
-import { SearchBar } from '../components/searchBar/SearchBar';
-import { renderProvider } from '../helpers/renderProvider';
+import { SearchBar } from '../../components/searchBar/SearchBar';
+import { renderProvider } from '../../helpers/renderProvider';
 
 describe('search-bar', () => {
   it('component renders', () => {

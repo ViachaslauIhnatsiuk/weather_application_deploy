@@ -14,7 +14,7 @@ interface IForecastState {
 
 interface IAction {
   type: string;
-  payload: IForecastResponse;
+  payload?: IForecastResponse | string;
 }
 
 export { ForecastStatus };
