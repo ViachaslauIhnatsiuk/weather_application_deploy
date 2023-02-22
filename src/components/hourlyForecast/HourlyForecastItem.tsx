@@ -3,23 +3,11 @@ import { Paper, Typography } from '@mui/material';
 import { WeatherIcon } from '../UI/WeatherIcon';
 import { IForecastHour } from '../../models/api';
 import { defaultForecast } from '../../constants/forecast';
+import { hourlyForecastItemStyles } from '../../models/componentsStyles';
 
 const HourlyForecastItem: FC<{ hour: IForecastHour }> = ({ hour }) => {
   return (
-    <Paper
-      elevation={3}
-      sx={{
-        width: 75,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        py: 1,
-        gap: 1,
-        backgroundColor: 'transparent',
-        color: '#ffffff',
-      }}
-      data-testid="hourly-forecast-item"
-    >
+    <Paper elevation={3} sx={hourlyForecastItemStyles} data-testid="hourly-forecast-item">
       <Typography sx={{ fontSize: 18, fontWeight: 100 }}>
         {hour.time.slice(-5)}
       </Typography>

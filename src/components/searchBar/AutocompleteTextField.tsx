@@ -1,23 +1,11 @@
 import { FC } from 'react';
 import { AutocompleteRenderInputParams, TextField } from '@mui/material';
+import { searchBarInputStyles } from '../../models/componentsStyles';
 
 const AutocompleteTextField: FC<AutocompleteRenderInputParams> = (params) => {
   return (
     <TextField
-      sx={{
-        py: '2px',
-        input: {
-          color: '#ffffff',
-          fontWeight: 100,
-        },
-        '& input::placeholder': {
-          color: '#ffffff',
-          fontWeight: 100,
-        },
-        '& .MuiOutlinedInput-root': {
-          '& > fieldset': { border: 'none' },
-        },
-      }}
+      sx={searchBarInputStyles}
       {...params}
       size="small"
       placeholder="Search for a city"

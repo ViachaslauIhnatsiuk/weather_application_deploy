@@ -3,6 +3,7 @@ import { Box, Button } from '@mui/material';
 import { selectCalendar, useAppSelector } from '../../store/selectors';
 import { useCalendar } from '../../hooks/useCalendar';
 import { GoogleButton } from '../../models/componentsModels';
+import { calendarButtonStyles } from '../../models/componentsStyles';
 import google from '../../assets/icons/google.svg';
 
 const CalendarButton: FC = () => {
@@ -11,16 +12,7 @@ const CalendarButton: FC = () => {
 
   return (
     <Button
-      sx={{
-        color: '#ffffff',
-        fontWeight: 200,
-        minWidth: 120,
-        backgroundColor: 'transparent',
-        textTransform: 'capitalize ',
-        '&:hover': {
-          backgroundColor: '#ffffff1a',
-        },
-      }}
+      sx={calendarButtonStyles}
       variant="contained"
       onClick={!token ? signIn : signOut}
       data-testid="calendar-button"

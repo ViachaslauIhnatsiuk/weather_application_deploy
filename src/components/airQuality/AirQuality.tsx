@@ -3,23 +3,13 @@ import { Box, Stack, Typography } from '@mui/material';
 import { selectAirQuality, useAppSelector } from '../../store/selectors';
 import { AirQualityItem } from './AirQualityItem';
 import { airQualityTitles } from '../../constants/airQualityTitles';
+import { airQualityStyles } from '../../models/componentsStyles';
 
 const AirQuality: FC = () => {
   const airQuality = useAppSelector(selectAirQuality);
 
   return (
-    <Stack
-      sx={{
-        maxHeight: { md: 270, sm: 270, xs: 'auto' },
-        gap: 1,
-        p: '15px 5px',
-        overflow: 'auto',
-        '&::-webkit-scrollbar': {
-          width: 0,
-        },
-      }}
-      data-testid="air-quality"
-    >
+    <Stack sx={airQualityStyles} data-testid="air-quality">
       <Typography
         sx={{ fontSize: 22, fontWeight: 300, color: '#ffffff', pl: 1 }}
         data-testid="air-quality-title"

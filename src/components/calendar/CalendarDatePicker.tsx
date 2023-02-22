@@ -4,6 +4,7 @@ import { CalendarDatePickerItem } from './CalendarDatePickerItem';
 import { useAppDispatch } from '../../store/store';
 import { getCalendar, setDateRange } from '../../store/actions/calendarActions';
 import { getISODayStart, getISODayEnd } from '../../helpers/date';
+import { datePickerButtonStyles } from '../../models/componentsStyles';
 
 const CalendarDatePicker: FC = () => {
   const [startDate, setStartDate] = useState<string>(getISODayStart());
@@ -35,21 +36,9 @@ const CalendarDatePicker: FC = () => {
         gap: 1,
       }}
     >
-      <CalendarDatePickerItem label="start" date={startDate} setDate={handleStartDate} />
-      <CalendarDatePickerItem label="end" date={endDate} setDate={handleEndDate} />
-      <Button
-        variant="contained"
-        sx={{
-          color: '#ffffff',
-          fontWeight: 300,
-          backgroundColor: 'transparent',
-          textTransform: 'capitalize ',
-          '&:hover': {
-            backgroundColor: '#ffffff1a',
-          },
-        }}
-        onClick={getEvents}
-      >
+      <CalendarDatePickerItem label="from" date={startDate} setDate={handleStartDate} />
+      <CalendarDatePickerItem label="to" date={endDate} setDate={handleEndDate} />
+      <Button variant="contained" sx={datePickerButtonStyles} onClick={getEvents}>
         Get Events
       </Button>
     </Box>

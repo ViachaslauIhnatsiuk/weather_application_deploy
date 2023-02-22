@@ -5,6 +5,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import { dialogProps } from '../../constants/calendar';
 import { DatePickerItemProps } from '../../models/componentsProps';
+import { datePickerStyles } from '../../models/componentsStyles';
 
 const CalendarDatePickerItem: FC<DatePickerItemProps> = ({ label, date, setDate }) => {
   return (
@@ -20,21 +21,7 @@ const CalendarDatePickerItem: FC<DatePickerItemProps> = ({ label, date, setDate 
           setDate(newValue as string);
         }}
         renderInput={(params) => (
-          <TextField
-            size="small"
-            sx={{
-              maxWidth: 110,
-              '& .MuiInputBase-root': {
-                color: '#ffffff',
-                fontSize: 14,
-              },
-              '& .MuiInputLabel-root': {
-                color: '#ffffff',
-                fontWeight: 300,
-              },
-            }}
-            {...params}
-          />
+          <TextField size="small" sx={datePickerStyles} {...params} />
         )}
       />
     </LocalizationProvider>

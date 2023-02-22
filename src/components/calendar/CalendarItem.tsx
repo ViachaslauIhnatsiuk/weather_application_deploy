@@ -1,42 +1,24 @@
 import { FC } from 'react';
 import { Box, Paper } from '@mui/material';
-import { calendarTime, convertCalendarTime } from '../../helpers/date';
+import { calendarDate, calendarTime, convertCalendarTime } from '../../helpers/date';
 import { ICalendarItem } from '../../models/api';
+import {
+  calendarItemStyles,
+  calendarItemDateStyles,
+} from '../../models/componentsStyles';
 
 const CalendarItem: FC<{ item: ICalendarItem }> = ({ item }) => {
   return (
-    <Box
-      sx={{
-        maxWidth: 400,
-        display: 'flex',
-        alignItems: 'center',
-        gap: 2,
-        p: 0.5,
-        color: '#ffffff',
-        fontWeight: 300,
-        fontFamily: 'Roboto',
-      }}
-    >
-      <Paper
-        elevation={4}
-        sx={{
-          minWidth: 50,
-          width: 50,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          p: '2px',
-          color: '#ffffff',
-          backgroundColor: 'transparent',
-        }}
-      >
+    <Box sx={calendarItemStyles}>
+      <Paper elevation={4} sx={calendarItemDateStyles}>
         {item.start.dateTime ? (
           <>
             <Box sx={{ fontSize: 13 }}>
-              {convertCalendarTime(item.start.dateTime, calendarTime)}
+              {convertCalendarTime(item.created, calendarDate)}
             </Box>
-            <Box sx={{ fontSize: 13 }}>
-              {convertCalendarTime(item.end.dateTime, calendarTime)}
+            <Box sx={{ fontSize: 13, display: 'flex', alignItems: 'center', gap: 1 }}>
+              <Box>{convertCalendarTime(item.start.dateTime, calendarTime)}</Box>
+              <Box>{convertCalendarTime(item.end.dateTime, calendarTime)}</Box>
             </Box>
           </>
         ) : (

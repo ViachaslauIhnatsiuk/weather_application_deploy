@@ -17,6 +17,12 @@ const unixDate = { day: 'numeric', month: 'long' };
 
 const calendarTime = { hour: '2-digit', minute: '2-digit' };
 
+const calendarDate = {
+  day: 'numeric',
+  month: 'numeric',
+  year: 'numeric',
+};
+
 const getDate = (formatter: Intl.DateTimeFormat, newDate?: number): string => {
   const date = newDate || Date.now();
 
@@ -64,4 +70,5 @@ export {
   unixWeekday,
   unixDate,
   calendarTime,
+  calendarDate,
 };

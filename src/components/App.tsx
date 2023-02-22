@@ -3,6 +3,7 @@ import { Container } from '@mui/material';
 import { MainView } from './MainView';
 import { ConfirmationModal } from './UI/ConfirmationModal';
 import { useBackground } from '../hooks/useBackground';
+import { appStyles } from '../models/componentsStyles';
 
 const App: FC = () => {
   const { changeBackgroundImage } = useBackground();
@@ -10,13 +11,8 @@ const App: FC = () => {
   return (
     <Container
       sx={{
-        height: '100vh',
-        minWidth: '100vw',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        ...appStyles,
         background: `url(${require(`../assets/background-images/${changeBackgroundImage()}`)}) 50% 0/cover no-repeat`,
-        transition: 'background 1.5s',
       }}
     >
       <ConfirmationModal />

@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 import { Dialog, DialogActions, DialogContent, DialogContentText } from '@mui/material';
 import { ConfirmationModalButton } from './ConfirmationModalButton';
+import { Transition } from './ConfirmationModalTransition';
 import { useAppDispatch } from '../../store/store';
 import { getLocation } from '../../store/actions/locationActions';
 import { getForecast } from '../../store/actions/forecastActions';
@@ -27,7 +28,8 @@ const ConfirmationModal: FC = () => {
           backdropFilter: 'blur(4px)',
         },
       }}
-      transitionDuration={400}
+      TransitionComponent={Transition}
+      transitionDuration={600}
       open={open}
       keepMounted
       onClose={handleRejection}

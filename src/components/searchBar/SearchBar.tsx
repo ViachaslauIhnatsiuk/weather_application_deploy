@@ -5,6 +5,7 @@ import { selectLocation, useAppSelector } from '../../store/selectors';
 import { setCurrentCity, setSearchCity } from '../../store/actions/locationActions';
 import { getForecast } from '../../store/actions/forecastActions';
 import { AutocompleteTextField } from './AutocompleteTextField';
+import { searchBarComponentProps } from '../../models/componentsStyles';
 import { ICity } from '../../models/api';
 
 const SearchBar: FC = () => {
@@ -27,16 +28,7 @@ const SearchBar: FC = () => {
     >
       <Autocomplete
         sx={{ '& .MuiSvgIcon-root': { color: '#ffffff' } }}
-        componentsProps={{
-          paper: {
-            sx: {
-              mt: 0.5,
-              color: '#ffffff',
-              backgroundColor: 'transparent',
-              backdropFilter: 'blur(100px)',
-            },
-          },
-        }}
+        componentsProps={searchBarComponentProps}
         freeSolo
         value={currentCity}
         fullWidth
