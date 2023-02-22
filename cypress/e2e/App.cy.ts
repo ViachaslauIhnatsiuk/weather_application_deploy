@@ -13,12 +13,24 @@ describe('App E2E', () => {
     cy.get('[data-testid=calendar-button]').contains('Sign In');
   });
 
-  it('confimational modal loads', () => {
+  it('confirmational modal loads', () => {
     cy.get('#modal').should('exist');
   });
 
   it('current forecast component renders with elements', () => {
     cy.get('[data-testid=current-forecast]').children();
+  });
+
+  it('air quality component should have 8 child elements', () => {
+    cy.get('[data-testid=air-quality-item]').should('have.length', 8);
+  });
+
+  it('daily forecast component should have 7 child elements', () => {
+    cy.get('[data-testid=daily-forecast-item]').should('have.length', 7);
+  });
+
+  it('hourly forecast component should have 24 child elements', () => {
+    cy.get('[data-testid=hourly-forecast-item]').should('have.length', 24);
   });
 
   it('autocomplete component works correctly', () => {

@@ -17,6 +17,7 @@ const AirQualityItem: FC<AirQualityItemProps> = (props) => {
         backgroundColor: 'transparent',
         color: '#ffffff',
       }}
+      data-testid="air-quality-item"
     >
       <Typography sx={{ fontSize: 14, fontWeight: 200 }}>{title}</Typography>
       <Typography sx={{ fontSize: 28, fontWeight: 300, lineHeight: 1.3 }}>
